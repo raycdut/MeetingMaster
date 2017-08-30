@@ -34,6 +34,7 @@ import {
   MeetingroomModule
 } from './meetingroom/meetingroom.module';
 
+import {MegaMenuModule} from 'primeng/primeng';
 const routes: Routes = [
   //basic routes
   {
@@ -73,6 +74,12 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    
+    //PrimeNg Start
+    MegaMenuModule,
+
+
+    //PrimeNg End
 
     //route
     RouterModule.forRoot(routes),
