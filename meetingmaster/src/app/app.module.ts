@@ -1,22 +1,87 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {
+  BrowserModule
+} from '@angular/platform-browser';
+import {
+  NgModule
+} from '@angular/core';
+import {
+  Router,
+  RouterModule,
+  Routes
+} from '@angular/router';
 
-import { AppComponent } from './app.component';
-import { MeetingroomComponent } from './meetingroom/meetingroom.component';
-import { MeetingroomBookingComponent } from './meetingroom-booking/meetingroom-booking.component';
-import { MeetingroomManagerComponent } from './meetingroom-manager/meetingroom-manager.component';
+import {
+  AppComponent
+} from './app.component';
+import {
+  HomeComponent
+} from './home/home.component';
+import {
+  AboutComponent
+} from './about/about.component';
+import {
+  ContactComponent
+} from './contact/contact.component';
+import {
+  LoginComponent
+} from './login/login.component';
+import {
+  MeetingroomComponent
+} from './meetingroom/meetingroom/meetingroom.component';
+
+import {
+  routes as meetingroomRoutes,
+  MeetingroomModule
+} from './meetingroom/meetingroom.module';
+
+const routes: Routes = [
+  //basic routes
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
+  },
+
+  //nested 
+  {
+    path: "meetingroom",
+    component: MeetingroomComponent,
+    children: meetingroomRoutes
+  }
+
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    MeetingroomComponent,
-    MeetingroomBookingComponent,
-    MeetingroomManagerComponent
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    LoginComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+
+    //route
+    RouterModule.forRoot(routes),
+    //child module
+    MeetingroomModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
