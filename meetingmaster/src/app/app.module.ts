@@ -1,17 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Router } from "@angular/router";
 
 import { AppComponent } from './app.component';
-import { MeetingroomComponent } from './meetingroom/meetingroom.component';
-import { MeetingroomBookingComponent } from './meetingroom-booking/meetingroom-booking.component';
-import { MeetingroomManagerComponent } from './meetingroom-manager/meetingroom-manager.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MeetingroomComponent,
-    MeetingroomBookingComponent,
-    MeetingroomManagerComponent
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule
@@ -19,4 +22,6 @@ import { MeetingroomManagerComponent } from './meetingroom-manager/meetingroom-m
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+}
