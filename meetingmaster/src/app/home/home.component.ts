@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MmNavigationbarComponent } from '../Share/mm-navigationbar/mm-navigationbar.component';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {

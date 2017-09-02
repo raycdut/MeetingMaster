@@ -34,6 +34,7 @@ import {
   MeetingroomModule
 } from './meetingroom/meetingroom.module';
 
+import { MmNavigationbarComponent } from './Share/mm-navigationbar/mm-navigationbar.component';
 const routes: Routes = [
   //basic routes
   {
@@ -70,9 +71,14 @@ const routes: Routes = [
     AboutComponent,
     ContactComponent,
     LoginComponent,
+    MmNavigationbarComponent,
   ],
   imports: [
     BrowserModule,
+    
+    //Bootstrap Start
+
+    //Bootstrap End
 
     //route
     RouterModule.forRoot(routes),
