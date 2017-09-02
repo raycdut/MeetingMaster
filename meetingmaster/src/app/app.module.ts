@@ -34,7 +34,7 @@ import {
   MeetingroomModule
 } from './meetingroom/meetingroom.module';
 
-import {MegaMenuModule} from 'primeng/primeng';
+import { MmNavigationbarComponent } from './Share/mm-navigationbar/mm-navigationbar.component';
 const routes: Routes = [
   //basic routes
   {
@@ -71,15 +71,14 @@ const routes: Routes = [
     AboutComponent,
     ContactComponent,
     LoginComponent,
+    MmNavigationbarComponent,
   ],
   imports: [
     BrowserModule,
     
-    //PrimeNg Start
-    MegaMenuModule,
+    //Bootstrap Start
 
-
-    //PrimeNg End
+    //Bootstrap End
 
     //route
     RouterModule.forRoot(routes),
