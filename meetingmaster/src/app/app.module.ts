@@ -1,41 +1,19 @@
-import {
-  BrowserModule
-} from '@angular/platform-browser';
-import {
-  NgModule
-} from '@angular/core';
-import {
-  Router,
-  RouterModule,
-  Routes
-} from '@angular/router';
-
-import {
-  AppComponent
-} from './app.component';
-import {
-  HomeComponent
-} from './home/home.component';
-import {
-  AboutComponent
-} from './about/about.component';
-import {
-  ContactComponent
-} from './contact/contact.component';
-import {
-  LoginComponent
-} from './login/login.component';
-import {
-  MeetingroomComponent
-} from './meetingroom/meetingroom/meetingroom.component';
-
-import {
-  routes as meetingroomRoutes,
-  MeetingroomModule
-} from './meetingroom/meetingroom.module';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import {  BrowserModule} from '@angular/platform-browser';
+import {  NgModule} from '@angular/core';
+import {  Router,  RouterModule,  Routes} from '@angular/router';
+import {  AppComponent} from './app.component';
+import {  HomeComponent} from './home/home.component';
+import {  AboutComponent} from './about/about.component';
+import {  ContactComponent} from './contact/contact.component';
+import {  LoginComponent} from './login/login.component';
+import {  MeetingroomComponent} from './meetingroom/meetingroom/meetingroom.component';
+import {  routes as meetingroomRoutes,  MeetingroomModule} from './meetingroom/meetingroom.module';
 import { MmNavigationbarComponent } from './Share/mm-navigationbar/mm-navigationbar.component';
 import { CommonModule } from '@angular/common';
 import { MmCarouselComponent } from './Share/mm-carousel/mm-carousel.component';
+
+
 const routes: Routes = [
   //basic routes
   {
@@ -79,6 +57,7 @@ const routes: Routes = [
     BrowserModule,
     CommonModule,
     //Bootstrap Start
+    CarouselModule.forRoot(),
 
     //Bootstrap End
 
