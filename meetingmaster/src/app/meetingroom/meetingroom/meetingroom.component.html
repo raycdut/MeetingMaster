@@ -1,6 +1,27 @@
-<div class="container">
-
-    i am in the outer side
-
-    <router-outlet></router-outlet>
+<div id="meetroom">
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand">Company Name</h3>
+            <nav>
+              <ul class="nav masthead-nav">
+                <li class="active"><a href="/home">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!--this is used for load meeting room information-->
+        <router-outlet></router-outlet>
+        <div class="mastfoot">
+          <div class="inner">
+            <p> powered by <a href="https://github.com/raycdut">@raycdut</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
