@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Directive, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-mm-navigationbar',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MmNavigationbarComponent implements OnInit {
 
-  constructor() { }
+  @Input() pageName:string // current page name
+
+  constructor() {
+
+   }
 
   ngOnInit() {
   }
+
+ isActive(menuName:string ):boolean{
+   return this.pageName === menuName;
+ }
 
 }

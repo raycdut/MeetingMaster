@@ -33,8 +33,9 @@ import {
   routes as meetingroomRoutes,
   MeetingroomModule
 } from './meetingroom/meetingroom.module';
-
 import { MmNavigationbarComponent } from './Share/mm-navigationbar/mm-navigationbar.component';
+import { CommonModule } from '@angular/common';
+import { MmCarouselComponent } from './Share/mm-carousel/mm-carousel.component';
 const routes: Routes = [
   //basic routes
   {
@@ -72,10 +73,11 @@ const routes: Routes = [
     ContactComponent,
     LoginComponent,
     MmNavigationbarComponent,
+    MmCarouselComponent,
   ],
   imports: [
     BrowserModule,
-    
+    CommonModule,
     //Bootstrap Start
 
     //Bootstrap End
