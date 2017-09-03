@@ -1,26 +1,18 @@
-import {
-  NgModule
-} from '@angular/core';
-import {
-  CommonModule
-} from '@angular/common';
-import {
-  MeetingroomComponent
-} from './meetingroom/meetingroom.component';
-import {
-  RouterModule,
-  Routes
-} from '@angular/router';
+import {  NgModule} from '@angular/core';
+import {  LocationStrategy,HashLocationStrategy,CommonModule} from '@angular/common';
+import {  MeetingroomComponent} from './meetingroom/meetingroom.component';
+import {  RouterModule,  Routes, ActivatedRoute} from '@angular/router';
+import { MeetingroomCurrentComponent } from './meetingroom-current/meetingroom-current.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'meetingroom',
+    redirectTo: 'currentroom/2',
     pathMatch: 'full'
   },
   {
-    path: 'meetingroom',
-    component: MeetingroomComponent
+    path: 'currentroom/:id',
+    component: MeetingroomCurrentComponent
   }
 ];
 @NgModule({
@@ -28,6 +20,6 @@ export const routes: Routes = [
     CommonModule,
     RouterModule
   ],
-  declarations: [MeetingroomComponent]
+  declarations: [MeetingroomComponent, MeetingroomCurrentComponent]
 })
 export class MeetingroomModule {}
