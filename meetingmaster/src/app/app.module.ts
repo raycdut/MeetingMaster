@@ -1,4 +1,5 @@
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ModalModule } from 'ngx-bootstrap/modal';
 import {  BrowserModule} from '@angular/platform-browser';
 import {  NgModule} from '@angular/core';
 import {  Router,  RouterModule,  Routes} from '@angular/router';
@@ -36,7 +37,7 @@ const routes: Routes = [
 
   //nested 
   {
-    path: "meetingroom",
+    path: "meetingroom/:id",
     component: MeetingroomComponent,
     children: meetingroomRoutes
   }
@@ -58,6 +59,7 @@ const routes: Routes = [
     CommonModule,
     //Bootstrap Start
     CarouselModule.forRoot(),
+    ModalModule.forRoot(),
 
     //Bootstrap End
 

@@ -4,12 +4,11 @@
       <div class="cover-container">
         <div class="masthead clearfix">
           <div class="inner">
-            <h3 class="masthead-brand">Company Name</h3>
+            <h3 class="masthead-brand">{{currentCompany.name}}</h3>
             <nav>
               <ul class="nav masthead-nav">
-                <li class="active"><a href="/home">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/home">Home</a></li>
+                <li><a href="javascript:void(0)" (click)="openModal(ChangeMeetingRoom)">Switch Room</a></li>
               </ul>
             </nav>
           </div>
@@ -25,3 +24,14 @@
     </div>
   </div>
 </div>
+<template #ChangeMeetingRoom>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Change Meeting Room</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      This is a modal.
+    </div>
+  </template>
